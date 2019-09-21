@@ -15,3 +15,6 @@ sed -i "s/HANDLE/@@@@@/g" `grep HANDLE -rl test`
 
 #grep整词匹配, 找到文件后对应内容全匹配。一定要注意
 sed -i "s/HANDLE/@@@@@/g" `grep HANDLE -rlw test`
+
+#删除匹配@@@@@的行
+sed -i "/@@@@@/d" `grep HANDLE -rlw test`
